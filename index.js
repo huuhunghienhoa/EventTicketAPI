@@ -35,10 +35,7 @@ app.use('/event', eventRouter)
 var mongoose = require('mongoose');
 
 //Set up default mongoose connection
-var mongoDB = 
-    process.env.MONGOLAB_URI ||
-    process.env.MONGOHQ_URL ||
-    'mongodb://localhost/EventMongoose';
+var mongoDB = process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://localhost/EventMongoose';
 mongoose.connect(mongoDB);
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
