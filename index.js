@@ -63,7 +63,7 @@ async function createAdacc(){
       console.log("Da ton tai TK admin");
     };
 };
-app.listen(process.env.PORT ||, function() {
+app.listen(process.env.PORT || 3000, function() {
   createAdacc();
   console.log("Dang chay port 3000");
 })
